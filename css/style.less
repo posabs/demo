@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+@total-width:750;
+// 设置根元素
+html{
+    // 设置rem的比值
+    font-size:(100vw/@total-width) * 40;
+    background-color: #eff0f4;
+}
+// 设置统一的宽度
+.w{
+    width: (693/40rem);
+    margin: 0 auto;
+}
+// 去除下划线
+a{
+    text-decoration: none;
+}
+// 设置头部容器样式
+.top-bar:extend(.w){
+    height:(175/40rem);
+    line-height:(175/40rem) ;
+    // 设置弹性容器
+    display: flex;
+    // 设置对齐方式
+    justify-content: space-between;
+    // 设置辅轴对齐方式
+    align-items: center;
+    // 设置a标签的颜色 字体大小
+.logo a{
+        color: #24253d;
+    }
+    // 设置字体族的样式
+    i{
+        color: #999;
+        font-size: (39/40rem);
+    }
+}
+.banner-png:extend(.w){
+    img{
+        width: 100%;
+        height: (277/40rem);
+    }
+}
+// 设置中间菜单
+.menu:extend(.w){
+    // 确定元素的高度
+    height: (334/40rem);
+    display: flex;
+    flex-flow: row wrap;
+    line-height: (104/40rem);
+    justify-content: space-between;
+    align-items: center;
+    a{
+        width: (327/40rem);
+        height: (106/40rem);
+        color: #ffff;
+        font-size: (30/40rem);
+        border-radius: (13/40rem);
+        box-shadow: 3px 4px 8px 0px rgba(187, 187, 187, 0.42);
+    }
+    i{
+        margin:0 (20/40rem) 0 (40/40rem);
+    }
+    .course{
+        background:linear-gradient(-90deg, #f97053 56%, #f47866 100%), linear-gradient(#fe8268, #fe8268);
+    }
+    .star{
+        background-image: linear-gradient(-90deg, #c657ff 56%, #d484fd 100%), linear-gradient(#c657ff, #c657ff);
+    }
+    .sub{
+        background-image: linear-gradient(-90deg, #ff3971 56%, #fe497c 100%), linear-gradient(#fcad00, #fcad00);
+    }
+    .download{
+        background-image: linear-gradient(-90deg, #1d92ff 56%, #1bc9fb 100%), linear-gradient(#1d92ff, #1d92ff);
+    }
+}
+
+.course-list:extend(.w){
+    height: (395/40rem);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-bottom: (50/40rem);
+    .title{
+        display: flex;
+        justify-content:space-between ;
+        align-items: center;
+        h2{
+            font-size: (33/40rem);
+            border-left: 3px solid #3a84ff;
+            padding-left: (17/40rem);
+        }
+        a{
+            font-size: (28/40rem);
+            color: #656565;
+        }
+    }
+    .item-list{
+        display: flex;
+        overflow: auto;
+    }
+    .item{
+        flex: none;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding:(22/40rem);
+        width: (328/40rem);
+        height: (323/40rem);
+        background-color: #ffff;
+        box-shadow: 0px 5px 11px 0px 
+		rgba(182, 182, 182, 0.23);
+        border-radius: (13/40rem);
+        margin-right: (20/40rem);
+        .title-png img{
+            width: 100%;
+        }
+        .course-title{
+            font-size: (26/40rem);
+        }
+        .user-info{
+            display: flex;
+            align-items: center;
+            .title-imgs{
+                width: (42/40rem);
+                height:(42/40rem);
+                img{
+                    width: 100%;
+                }
+            } 
+            .name{
+                font-size: (25/40rem);
+                color: #969393;
+                margin-left: (17/40rem);
+            }
+        }
+    }
+}
